@@ -18,15 +18,15 @@ function App() {
     },
     {
     id: 3,
-    project_name: 'Crime Stats For Travelers',
-    project_img: './Crime.png',
-    project_description:'This was a project where we mapped US crime data from the FBI Database.',
+    project_name: 'Secret Family Recipie Cookbook',
+    project_img: 'https://raw.githubusercontent.com/jengopockets/Portfolio/master/src/Components/Project/Secret.png',
+    project_description:'I was one of the front-end engineers on this project where I was responsible for CRUD fuctionallity.',
     },
     {
     id: 4,
-    project_name: 'Crime Stats For Travelers',
-    project_img: './Crime.png',
-    project_description:'This was a project where we mapped US crime data from the FBI Database.',
+    project_name: 'Connect Our Kids',
+    project_img: 'https://raw.githubusercontent.com/jengopockets/Portfolio/master/src/Components/Project/Connect.png',
+    project_description:'I was one of the UI designers on this project where we created a landing page with some JavaScript.',
     }
   ])
 
