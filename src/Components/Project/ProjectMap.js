@@ -1,7 +1,9 @@
-import React from 'react';
+import React, { useState } from 'react';
 import Card from './ProjectCards';
 
 const Projects = props => {
+    console.log(props);
+
     return(
         <div>
             {props.cards.map(card =>
@@ -10,3 +12,5 @@ const Projects = props => {
         </div>
     );
 }
+
+export default Projects;
