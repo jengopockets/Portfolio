@@ -1,5 +1,6 @@
-.class {
-    
+.card {
+    border: 2px dashed red;
+    width: 50%;
 }
 h2 {
     color: white;
