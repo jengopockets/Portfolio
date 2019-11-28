@@ -1,5 +1,5 @@
 import React from 'react';
-import './Project.css'
+
 
 const Card = (props) => {
     return(
@@ -8,7 +8,7 @@ const Card = (props) => {
             <img src={props.card.project_img} alt="Project" />
             <p>{props.card.project_description}</p>  
             <div>
-                <i></i>
+                <a href="#" class="fa fa-github"></a>
             </div>          
         </div>
     )

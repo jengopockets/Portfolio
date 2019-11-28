@@ -1,9 +1,21 @@
+.cards {
+    display: flex;
+    flex-wrap: wrap;
+}
 .card {
     border: 2px dashed red;
     margin-left: 5rem;
     margin-right: 5rem;
     padding: 1rem;
+    width: 25%;
 }
 h2 {
     color: white;
+}
+.fa {
+    padding: 20px;
+    font-size: 30px;
+    width: 50px;
+    text-align: center;
+    text-decoration: none;
 }
