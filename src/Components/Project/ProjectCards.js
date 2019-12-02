@@ -5,10 +5,12 @@ const Card = (props) => {
     return(
         <div class="card" key={props.card.id}>
             <h2>{props.card.project_name}</h2>
-            <img src={props.card.project_img} alt="Project" />
+            <a href={props.card.site} alt="Site-Link">
+            <img src={props.card.project_img} alt="Project" />            
+            </a>
             <p>{props.card.project_description}</p>  
             <div>
-                <a href="#" class="fa fa-github"></a>
+                <a href={props.card.git} class="fa fa-github" alt="Git-Link">{null}</a>
             </div>          
         </div>
     )
