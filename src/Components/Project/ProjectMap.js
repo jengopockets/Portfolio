@@ -6,7 +6,7 @@ const Projects = props => {
     console.log(props);
 
     return(
-        <div class="cards">
+        <div className="cards">
             {props.cards.map(card =>
                 {return <Card key={card.id} card={card} />
                 })}
