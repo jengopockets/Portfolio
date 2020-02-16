@@ -1,14 +1,20 @@
-import React from 'react';
-import Card from './ProjectCards';
-import './Project.css'
-
+import React, {useState} from 'react';
+import PostCard from './ProjectCards';
+import {makeStyles} from '@material-ui/core';
+const thisStyle = makeStyles({
+    cardContain: {
+        display: 'flex',
+        flexWrap: 'wrap',
+        justifyContent: 'space-between'
+    }
+})
 const Projects = props => {
-    console.log(props);
+    const classes = thisStyle();
 
     return(
-        <div className="cards">
+        <div className={classes.cardContain}>
             {props.cards.map(card =>
-                {return <Card key={card.id} card={card} />
+                {return <PostCard key={card.id} card={card}/>
                 })}
         </div>
     );
