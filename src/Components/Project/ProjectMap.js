@@ -1,6 +1,6 @@
-import React, {useState} from 'react';
+import React from 'react';
 import PostCard from './ProjectCards';
-import Button, {makeStyles} from '@material-ui/core';
+import {makeStyles} from '@material-ui/core';
 import ProjectSwipe from './ProjectMobile';
 const thisStyle = makeStyles({
     cardContain: {

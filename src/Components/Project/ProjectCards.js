@@ -95,7 +95,9 @@ const thisStyles = makeStyles({
                 </a>
                 <Typography variant="body1" component="p" className={classes.content}>{props.card.project_description}</Typography>  
                 <div>
-                    <a href={props.card.git} className={classes.gitButton} target='_blank' rel="noopener noreferrer" className="fa fa-github" alt="Git-Link"></a>
+                    <a href={props.card.git} className={classes.gitButton} target='_blank' rel="noopener noreferrer" alt="Git-Link">
+                        <Icon className="fa fa-github"/>
+                    </a>
                 </div>          
             </Card>
 

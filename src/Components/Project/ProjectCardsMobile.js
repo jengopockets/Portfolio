@@ -1,10 +1,10 @@
-import React, {useState} from 'react';
+import React from 'react';
 import { makeStyles } from '@material-ui/core/styles';
 import Card from '@material-ui/core/Card';
 import CardMedia from '@material-ui/core/CardMedia';
 import Typography from '@material-ui/core/Typography';
 import cardBack from '../../image/playing-card-ace.JPG';
-import cardFront from '../../image/playing-card-front.jpg';
+import { Icon } from '@material-ui/core';
 
 const thisStyles = makeStyles({
     root: {
@@ -58,13 +58,9 @@ const thisStyles = makeStyles({
 
 
  const PostCard = props => {
-    const [flipped, setFlipped] = useState(true)
     const classes = thisStyles();
 
-    function handleClick(e){
-        e.preventDefault();
-        setFlipped(!flipped)        
-    }
+    
     return(
             <Card className={classes.root} key={props.card.id} variant="outlined" >
                 <Typography className={classes.title} variant="h4" component="h2">{props.card.project_name}</Typography>
@@ -73,7 +69,9 @@ const thisStyles = makeStyles({
                 </a>
                 <Typography variant="body1" component="p" className={classes.content}>{props.card.project_description}</Typography>  
                 <div>
-                    <a href={props.card.git} className={classes.gitButton} target='_blank' rel="noopener noreferrer" className="fa fa-github" alt="Git-Link"></a>
+                    <a href={props.card.git} className={classes.gitButton} target='_blank' rel="noopener noreferrer"  alt="Git-Link">
+                        <Icon className="fa fa-github"/>
+                    </a>
                 </div>          
             </Card>
 
