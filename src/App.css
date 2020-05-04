@@ -7,13 +7,30 @@
 }
 
 .App-header {
-  background-color: #282c34;
+  background-color: #477148;
   min-height: 100%;
   font-size: calc(10px + 2vmin);
   color: white;
   width: 100%;
+  
 }
 
 .App-link {
   color: #09d3ac;
+}
+.spinner {
+  display: flex;
+  justify-content: center;
+}
+
+@keyframes spin {
+  from {transform: rotate3d(0);}
+  to {transform: rotate3d(0, 1, 0, 360deg);}
+}
+
+@media (max-width: 500px) {
+  .App-header {
+    display: flex;
+    flex-direction: column-reverse;
+  }
 }

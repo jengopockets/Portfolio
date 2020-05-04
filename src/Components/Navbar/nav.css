@@ -1,0 +1,6 @@
+button.MuiBottomNavigationAction-root {
+    color: white;
+}
+button.MuiBottomNavigationAction-root.Mui-selected { /* Increase the specificity */
+    color: #477148;
+  }
