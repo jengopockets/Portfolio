@@ -1,0 +1,17 @@
+button.MuiBottomNavigationAction-root {
+    color: white;
+}
+a.MuiBottomNavigationAction-root.Mui-selected { /* Increase the specificity */
+    color: #477148;
+  }
+.navbar {
+    position: fixed;
+    width: 100%;
+}
+@media (max-width: 500px) {
+    .navbar {
+        position: absolute;
+        bottom: 0;
+        padding-top: 0;
+    }
+}
