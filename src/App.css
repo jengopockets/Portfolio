@@ -12,11 +12,14 @@
   font-size: calc(10px + 2vmin);
   color: white;
   width: 100%;
-  
+  display: flex;  
 }
 
 .App-link {
   color: #09d3ac;
+}
+.page {
+  margin-top: 10%;
 }
 .spinner {
   display: flex;
@@ -32,5 +35,8 @@
   .App-header {
     display: flex;
     flex-direction: column-reverse;
+  }
+  .page {
+    margin-top: 0;
   }
 }

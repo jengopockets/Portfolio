@@ -11,8 +11,14 @@ const useStyles = makeStyles({
         backgroundColor:'#000000',
         
     },
-     
-    
+
+    link:{
+        color:"white",
+        "&$selected": {
+            color:"#477148"
+        }
+    },
+        
 })
 
 
@@ -33,8 +39,8 @@ const Navbar = () => {
             selected 
             className={classes.root}>
 
-            <BottomNavigationAction label="Home" icon={<HomeIcon/>}/>
-            <BottomNavigationAction component={NavLink} to="/portfolio" label="Portfolio" icon={<AppsIcon/>}/>
+            <BottomNavigationAction component={NavLink} to="/" label="Home" value="Home" icon={<HomeIcon/>} className={classes.link}/>
+            <BottomNavigationAction component={NavLink} to="/portfolio"  label="Portfolio" value="Portfolio" icon={<AppsIcon/>} className={classes.link}/>
             <BottomNavigationAction label="Contact" icon={<PersonIcon/>}/>
 
             </BottomNavigation>

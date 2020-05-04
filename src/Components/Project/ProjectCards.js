@@ -18,8 +18,7 @@ const thisStyles = makeStyles({
         flexDirection: 'column',
         justifyContent: 'space-between',
         backgroundImage: 'url(' + cardBack +')',
-        backgroundSize: 'cover',
-        
+        backgroundSize: 'cover'               
         
     },
     rootFront: {
@@ -28,7 +27,7 @@ const thisStyles = makeStyles({
         border: '1px solid black',
         borderRadius: "12px",
         backgroundImage: 'url(' + cardFront +')',
-        backgroundSize: 'cover',
+        backgroundSize: 'cover'
         
         
         

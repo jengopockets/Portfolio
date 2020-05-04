@@ -9,7 +9,7 @@ import { Icon } from '@material-ui/core';
 const thisStyles = makeStyles({
     root: {
         width: '100vw',
-        height: '91vh',
+        height: '83vh',
         marginLeft: '0%',
         marginRight: '5%',
         border: '1px solid black',

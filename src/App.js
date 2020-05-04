@@ -4,6 +4,7 @@ import { Route } from 'react-router-dom';
 import useFetch from './Components/CustomHooks/useFetch';
 import './App.css';
 import Navbar from './Components/Navbar/navBar';
+import Home from './Components/Home/home';
 
 function App () {
   const res =  useFetch(`https://jengodevportfolio.herokuapp.com/api/project/projects`)
@@ -21,13 +22,16 @@ function App () {
         <div className="App">
           <header className="App-header">
             <Navbar/>
-            {/* <Route
+            <div className="page">
+            <Route
             exact path='/'
-            /> */}
+            render={() => <Home/>}
+            />
             <Route
               path='/portfolio'
               render={() => <Project cards={res.response}/>}
-            />            
+            />  
+            </div>          
           </header>
         </div>
       );
