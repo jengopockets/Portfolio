@@ -13,10 +13,8 @@ const useStyles = makeStyles({
     },
 
     link:{
-        color:"white",
-        "&$selected": {
-            color:"#477148"
-        }
+        color:"white"
+        
     },
         
 })

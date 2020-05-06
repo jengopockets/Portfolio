@@ -59,7 +59,7 @@ const thisStyles = makeStyles({
 
  const PostCard = props => {
     const classes = thisStyles();
-
+    console.log(props.card.project_img);
     
     return(
             <Card className={classes.root} key={props.card.id} variant="outlined" >
