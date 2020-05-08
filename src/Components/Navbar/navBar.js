@@ -23,12 +23,13 @@ const useStyles = makeStyles({
 
 const Navbar = () => {
     const classes = useStyles()
-    const [value, setValue] = React.useState(0)
+    const [value, setValue] = React.useState('Home')
     return(
         <div className='navbar'>
             <BottomNavigation 
             value={value} 
             onChange={(e, newValue) => { 
+                console.log(newValue);
                 setValue(newValue)
                 
                 
@@ -39,7 +40,7 @@ const Navbar = () => {
 
             <BottomNavigationAction component={NavLink} to="/" label="Home" value="Home" icon={<HomeIcon/>} className={classes.link}/>
             <BottomNavigationAction component={NavLink} to="/portfolio"  label="Portfolio" value="Portfolio" icon={<AppsIcon/>} className={classes.link}/>
-            <BottomNavigationAction label="Contact" icon={<PersonIcon/>}/>
+            <BottomNavigationAction component={NavLink} to="/contacts" label="Contacts" value="Contacts" icon={<PersonIcon/>} className={classes.link}/>
 
             </BottomNavigation>
         </div>

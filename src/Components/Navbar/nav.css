@@ -2,7 +2,7 @@ button.MuiBottomNavigationAction-root {
     color: white;
 }
 a.MuiBottomNavigationAction-root.Mui-selected { /* Increase the specificity */
-    color: #477148;
+    color: #3a5f42;
   }
 .navbar {
     position: fixed;
