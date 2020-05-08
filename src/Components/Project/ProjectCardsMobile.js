@@ -5,6 +5,7 @@ import CardMedia from '@material-ui/core/CardMedia';
 import Typography from '@material-ui/core/Typography';
 import cardBack from '../../image/playing-card-ace.JPG';
 import { Icon } from '@material-ui/core';
+import { FaGithub } from 'react-icons/fa';
 
 const thisStyles = makeStyles({
     root: {
@@ -44,6 +45,7 @@ const thisStyles = makeStyles({
     },
     content: {
         border: '1px solid red',
+        marginTop: '5%',
         marginRight: '2%',
         marginLeft: '2%',
         borderRadius: '12px',
@@ -52,6 +54,10 @@ const thisStyles = makeStyles({
         justifySelf:'center',
         backgroundColor: 'black',
         opacity: 0.7
+    },
+    gitButton:{
+        fontSize: '3rem',
+        color: '#000000'
     }
     
 })
@@ -70,7 +76,7 @@ const thisStyles = makeStyles({
                 <Typography variant="body1" component="p" className={classes.content}>{props.card.project_description}</Typography>  
                 <div>
                     <a href={props.card.git} className={classes.gitButton} target='_blank' rel="noopener noreferrer"  alt="Git-Link">
-                        <Icon className="fa fa-github"/>
+                        <FaGithub/>
                     </a>
                 </div>          
             </Card>
