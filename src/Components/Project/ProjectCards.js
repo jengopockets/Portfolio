@@ -6,7 +6,7 @@ import Typography from '@material-ui/core/Typography';
 import cardBack from '../../image/playing-card-ace.JPG';
 import cardFront from '../../image/playing-card-front.jpg';
 import ReactCardFlip from 'react-card-flip';
-import { Icon } from '@material-ui/core';
+import { Icon, Tooltip } from '@material-ui/core';
 
 const thisStyles = makeStyles({
     root: {
@@ -86,6 +86,7 @@ const thisStyles = makeStyles({
     }
     return(
         <ReactCardFlip isFlipped={flipped}>
+            <Tooltip title="Click to Flip Card" placement="right-start">
             <Card className={classes.root} key={props.card.id} variant="outlined" >
                 <Icon className={classes.backButton} onClick={handleClick}>arrow_back</Icon>
                 <Typography className={classes.title} variant="h4" component="h2">{props.card.project_name}</Typography>
@@ -99,10 +100,12 @@ const thisStyles = makeStyles({
                     </a>
                 </div>          
             </Card>
-
+            </Tooltip>
+            <Tooltip title="Click to Flip Card" placement="right-start">
             <Card className={classes.rootFront} onClick={handleClick}>
                 
             </Card>
+            </Tooltip>
         </ReactCardFlip>
     )
 }

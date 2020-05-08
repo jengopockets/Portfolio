@@ -1,7 +1,7 @@
 import React, {useState} from "react";
 import { makeStyles } from '@material-ui/core/styles';
 import {FaReact, FaPython, FaNodeJs, FaGitAlt} from 'react-icons/fa'
-import {Avatar, Card} from "@material-ui/core";
+import {Avatar, Card, Tooltip} from "@material-ui/core";
 import ReactCardFlip from 'react-card-flip';
 import "./home.css";
 const thisStyles = makeStyles({
@@ -96,7 +96,10 @@ const Home = () => {
     }
 
     return(
-        <ReactCardFlip isFlipped={flipped}>
+        
+        <ReactCardFlip isFlipped={flipped} >
+            
+            <Tooltip title="Click to Flip Card" placement="right-start">
             <Card className={classes.root} onClick={handleClick}>
                 <h2 className={classes.textColor}>
                     Software Development
@@ -139,6 +142,8 @@ const Home = () => {
                     I am a Full Stack Web Developer interested in web development and robotics. I am currently a Team Lead at Lambda School learning new things every day. I am skilled in React, Redux, JavaScript, and have started diving into Python. 
                 </p>
             </Card>
+            </Tooltip>
+            <Tooltip title="Click to Flip Card" placement="right-start">
             <Card className={classes.root} onClick={handleClick}>
                 <h1 className={classes.textColor}>
                     Jacob Tharp
@@ -148,9 +153,11 @@ const Home = () => {
                     Full Stack Developer
                 </h2>
             </Card>
+            </Tooltip>
+            
 
         </ReactCardFlip>
-
+        
     );
 }
 
