@@ -86,12 +86,13 @@ const thisStyles = makeStyles({
     }
     return(
         <ReactCardFlip isFlipped={flipped}>
-            <Tooltip title="Click to Flip Card" placement="right-start">
             <Card className={classes.root} key={props.card.id} variant="outlined" >
+                <Tooltip title="Click to Flip Card" placement="right-start">
                 <Icon className={classes.backButton} onClick={handleClick}>arrow_back</Icon>
+                </Tooltip>
                 <Typography className={classes.title} variant="h4" component="h2">{props.card.project_name}</Typography>
                 <a href={props.card.site} className={classes.indexUp} target='_blank' rel="noopener noreferrer" alt="Site-Link">
-                <CardMedia className={classes.media} image={props.card.project_img} title="Project" />            
+                <CardMedia className={classes.media} image={props.card.project_img} title="Click to go to project" />            
                 </a>
                 <Typography variant="body1" component="p" className={classes.content}>{props.card.project_description}</Typography>  
                 <div>
@@ -100,7 +101,6 @@ const thisStyles = makeStyles({
                     </a>
                 </div>          
             </Card>
-            </Tooltip>
             <Tooltip title="Click to Flip Card" placement="right-start">
             <Card className={classes.rootFront} onClick={handleClick}>
                 
