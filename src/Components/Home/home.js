@@ -101,42 +101,42 @@ const Home = () => {
                 <h2 className={classes.textColor}>
                     Software Development
                 </h2>
-            <div className={classes.faContainer}>
-                <div className={classes.faRCon}>
-                    <div>
-                    <FaReact/>
+                <div className={classes.faContainer}>
+                    <div className={classes.faRCon}>
+                        <div>
+                            <FaReact/>
+                        </div>
+                        <h3>
+                            React
+                        </h3>
                     </div>
-                    <h3>
-                        React
-                    </h3>
-                </div>
-                <div className={classes.faNCon}>
-                    <div>
-                    <FaNodeJs/>
+                    <div className={classes.faNCon}>
+                        <div>
+                            <FaNodeJs/>
+                        </div>
+                        <h3>
+                            Node JS
+                        </h3>
                     </div>
-                    <h3>
-                        Node JS
-                    </h3>
-                </div>
-                <div className={classes.faPCon}>
-                    <div>
-                    <FaPython/>
+                    <div className={classes.faPCon}>
+                        <div>
+                            <FaPython/>
+                        </div>
+                        <h3>
+                            Python
+                        </h3>
                     </div>
-                    <h3>
-                        Python
-                    </h3>
-                </div>
-                <div className={classes.faGCon}>
-                    <div>
-                    <FaGitAlt/>
+                    <div className={classes.faGCon}>
+                        <div>
+                            <FaGitAlt/>
+                        </div>
+                        <h3>
+                            Git
+                        </h3>
                     </div>
-                    <h3>
-                        Git
-                    </h3>
                 </div>
-            </div>
                 <p className={classes.pColor}>
-                I am a Full Stack Web Developer interested in web development and robotics. I am currently a Team Lead at Lambda School learning new things every day. I am skilled in React, Redux, JavaScript, and have started diving into Python. 
+                    I am a Full Stack Web Developer interested in web development and robotics. I am currently a Team Lead at Lambda School learning new things every day. I am skilled in React, Redux, JavaScript, and have started diving into Python. 
                 </p>
             </Card>
             <Card className={classes.root} onClick={handleClick}>

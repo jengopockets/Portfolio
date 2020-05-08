@@ -1,10 +1,12 @@
 import React from 'react';
 import Project from './Components/Project/ProjectMap';
-import { Route } from 'react-router-dom';
+import { Router, Route } from 'react-router-dom';
 import useFetch from './Components/CustomHooks/useFetch';
+import history from './Components/util/hystory';
 import './App.css';
 import Navbar from './Components/Navbar/navBar';
 import Home from './Components/Home/home';
+import Contacts from './Components/Contact/contact';
 
 function App () {
   const res =  useFetch(`https://jengodevportfolio.herokuapp.com/api/project/projects`)
@@ -22,16 +24,22 @@ function App () {
         <div className="App">
           <header className="App-header">
             <Navbar/>
-            <div className="page">
-            <Route
-            exact path='/'
-            render={() => <Home/>}
-            />
-            <Route
-              path='/portfolio'
-              render={() => <Project cards={res.response}/>}
-            />  
-            </div>          
+            <Router history={history}>
+              <div className="page">
+                <Route
+                exact path='/'
+                render={() => <Home/>}
+                />
+                <Route
+                  path='/portfolio'
+                  render={() => <Project cards={res.response}/>}
+                />  
+                <Route
+                  path='/contacts'
+                  render={() => <Contacts/>}
+                />  
+              </div>
+            </Router>          
           </header>
         </div>
       );
