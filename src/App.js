@@ -23,8 +23,8 @@ function App () {
       return (
         <div className="App">
           <header className="App-header">
-            <Navbar/>
             <Router history={history}>
+              <Navbar/>
               <div className="page">
                 <Route
                 exact path='/'
