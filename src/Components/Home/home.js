@@ -1,5 +1,6 @@
 import React, {useState} from "react";
 import { makeStyles } from '@material-ui/core/styles';
+import {FaReact} from 'react-icons/fa'
 import {Avatar, Card} from "@material-ui/core";
 import ReactCardFlip from 'react-card-flip';
 import "./home.css";
@@ -32,7 +33,15 @@ const thisStyles = makeStyles({
         borderRadius: '12px',
         border: '2px solid #477148',
         paddingBottom: '2%'
+    },
+    faContainer:{
+        color:'rgb(97, 218, 251)',
+        display:'flex',
+        flexDirection:'column',
+        alignContent:'center',
+        border:'2px dashed red'
     }
+    
 })
 const Home = () => {
     const [flipped, setFlipped] = useState(true)
@@ -49,6 +58,14 @@ const Home = () => {
                 <h2 className={classes.textColor}>
                     Software Development
                 </h2>
+            <div className={classes.faContainer}>
+                <div>
+                <FaReact/>
+                </div>
+                <h3>
+                    React
+                </h3>
+            </div>
                 <p className={classes.textColor}>
                 I am a Full Stack Web Developer interested in web development and robotics. I am currently a Team Lead at Lambda School learning new things every day. I am skilled in React, Redux, JavaScript, and have started diving into Python. 
                 </p>
@@ -64,6 +81,7 @@ const Home = () => {
             </Card>
 
         </ReactCardFlip>
+
     );
 }
 
