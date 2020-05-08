@@ -7,6 +7,7 @@ import cardBack from '../../image/playing-card-ace.JPG';
 import cardFront from '../../image/playing-card-front.jpg';
 import ReactCardFlip from 'react-card-flip';
 import { Icon, Tooltip } from '@material-ui/core';
+import { FaGithub } from 'react-icons/fa';
 
 const thisStyles = makeStyles({
     root: {
@@ -18,7 +19,8 @@ const thisStyles = makeStyles({
         flexDirection: 'column',
         justifyContent: 'space-between',
         backgroundImage: 'url(' + cardBack +')',
-        backgroundSize: 'cover'               
+        backgroundSize: 'cover',
+        marginBottom: '1rem'               
         
     },
     rootFront: {
@@ -27,7 +29,8 @@ const thisStyles = makeStyles({
         border: '1px solid black',
         borderRadius: "12px",
         backgroundImage: 'url(' + cardFront +')',
-        backgroundSize: 'cover'
+        backgroundSize: 'cover',
+        margin: '1rem'  
         
         
         
@@ -71,6 +74,10 @@ const thisStyles = makeStyles({
         opacity: 0.7,
         alignSelf:'center',
         marginTop: '3%'
+    },
+    gitButton:{
+        fontSize: '3rem',
+        color: '#000000'
     }
     
 })
@@ -97,7 +104,7 @@ const thisStyles = makeStyles({
                 <Typography variant="body1" component="p" className={classes.content}>{props.card.project_description}</Typography>  
                 <div>
                     <a href={props.card.git} className={classes.gitButton} target='_blank' rel="noopener noreferrer" alt="Git-Link">
-                        <Icon className="fa fa-github"/>
+                        <FaGithub/>
                     </a>
                 </div>          
             </Card>
