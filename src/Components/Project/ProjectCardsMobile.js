@@ -1,11 +1,12 @@
-import React from 'react';
+import React, {useState} from 'react';
 import { makeStyles } from '@material-ui/core/styles';
 import Card from '@material-ui/core/Card';
 import CardMedia from '@material-ui/core/CardMedia';
 import Typography from '@material-ui/core/Typography';
 import cardBack from '../../image/playing-card-ace.JPG';
-import { Icon } from '@material-ui/core';
 import { FaGithub } from 'react-icons/fa';
+import { Snackbar } from '@material-ui/core';
+import Alert from '@material-ui/lab/Alert';
 
 const thisStyles = makeStyles({
     root: {
@@ -65,9 +66,17 @@ const thisStyles = makeStyles({
 
  const PostCard = props => {
     const classes = thisStyles();
-    console.log(props.card.project_img);
+    const [open, setOpen] = useState(true)
+
+    const handleClose = (event, reason) => {
+        if(reason === 'clickaway'){
+            return;
+        }
+        setOpen(false);
+    };
     
     return(
+        <>
             <Card className={classes.root} key={props.card.id} variant="outlined" >
                 <Typography className={classes.title} variant="h4" component="h2">{props.card.project_name}</Typography>
                 <a href={props.card.site} className={classes.indexUp} target='_blank' rel="noopener noreferrer" alt="Site-Link">
@@ -80,6 +89,10 @@ const thisStyles = makeStyles({
                     </a>
                 </div>          
             </Card>
+            <Snackbar open={open} autoHideDuration={3000} onClose={handleClose}>
+                <Alert severity="info" variant="filled">Swipe To see More Projects</Alert>
+            </Snackbar>
+        </>
 
         
     )

@@ -1,7 +1,8 @@
 import React, {useState} from "react";
 import { makeStyles } from '@material-ui/core/styles';
 import {FaReact, FaPython, FaNodeJs, FaGitAlt} from 'react-icons/fa'
-import {Avatar, Card, Tooltip} from "@material-ui/core";
+import {Avatar, Card, Tooltip, Snackbar} from "@material-ui/core";
+import Alert from '@material-ui/lab/Alert';
 import ReactCardFlip from 'react-card-flip';
 import "./home.css";
 const thisStyles = makeStyles({
@@ -88,15 +89,23 @@ const thisStyles = makeStyles({
 })
 const Home = () => {
     const [flipped, setFlipped] = useState(true)
+    const [open, setOpen] = useState(true)
     const classes = thisStyles();
+
 
     function handleClick(e){
         e.preventDefault();
         setFlipped(!flipped)
     }
+    const handleClose = (event, reason) => {
+        if(reason === 'clickaway'){
+            return;
+        }
+        setOpen(false);
+    };
 
     return(
-        
+        <>
         <ReactCardFlip isFlipped={flipped} >
             
             <Tooltip title="Click to Flip Card" placement="right-start">
@@ -158,6 +167,10 @@ const Home = () => {
 
         </ReactCardFlip>
         
+        <Snackbar open={open} autoHideDuration={3000} onClose={handleClose}>
+            <Alert severity="info" variant="filled">Click or touch the title to learn more!</Alert>
+        </Snackbar>
+        </>
     );
 }
 
