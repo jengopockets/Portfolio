@@ -44,7 +44,7 @@ const thisStyles = makeStyles({
 
 });
 
-const Contacts = () => {
+const Contacts = (props) => {
     const classes = thisStyles()
     const { register, handleSubmit, watch, errors } = useForm()
     const onSubmit = data => {
@@ -78,18 +78,22 @@ const Contacts = () => {
                     <div className={classes.input}>
                         <h2> Name</h2>
                         <input placeholder='Name' type="text" name="name" ref={register({required: true, maxLength: 20})}/>
+                        {errors.name && "Name required"}
                     </div>
                     <div className={classes.input}>
                         <h2> Email</h2>
                         <input placeholder="email@emailserver.com" name="email" ref={register({ required: true, pattern: /^\w+@[a-zA-Z_]+?\.[a-zA-Z]{2,3}$/i})}/>
+                        {errors.email && "Valid email required"}
                     </div>
                     <div className={classes.input}>
                         <h2> Phone Number</h2>
-                        <input type="tel" name="number" placeholder="555-123-4567"  ref={register({ required: true, pattern: /^[2-9]\d{2}-\d{3}-\d{4}$/i})}/>
+                        <input type="tel" name="number" placeholder="555-123-4567"  ref={register({required: true, minLength: 10, maxLength: 12})}/>
+                        {errors.number && "Valid number required"}
                     </div>
                     <div className={classes.input}>
                         <h2> Message</h2>
                         <textarea placeholder="Enter message here" type="text" name="message" ref={register({ required: true, maxLength: 1000 })} className={classes.message}/>
+                        {errors.message && "Please leave a message"}
                     </div>
                     <input type='submit' value="Send"/>
 
