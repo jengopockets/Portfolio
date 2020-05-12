@@ -35,7 +35,7 @@ function App () {
                   render={() => <Project cards={res.response}/>}
                 />  
                 <Route
-                  path='/contacts'
+                  path='/contact'
                   render={() => <Contacts/>}
                 />  
               </div>

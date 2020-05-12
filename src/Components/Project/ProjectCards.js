@@ -77,7 +77,8 @@ const thisStyles = makeStyles({
     },
     gitButton:{
         fontSize: '3rem',
-        color: '#000000'
+        color: '#ffffff',
+        borderRadius: '12px'
     }
     
 })
@@ -103,10 +104,10 @@ const thisStyles = makeStyles({
                 </a>
                 <Typography variant="body1" component="p" className={classes.content}>{props.card.project_description}</Typography>  
                 <div>
-                    <a href={props.card.git} className={classes.gitButton} target='_blank' rel="noopener noreferrer" alt="Git-Link">
+                    <a href={props.card.git} className={classes.gitButton} target='_blank' rel="noopener noreferrer" alt="Git-Link" title="Github Link">
                         <FaGithub/>
                     </a>
-                </div>          
+                </div>      
             </Card>
             <Tooltip title="Click to Flip Card" placement="right-start">
             <Card className={classes.rootFront} onClick={handleClick}>

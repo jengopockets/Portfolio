@@ -82,7 +82,7 @@ const Contacts = (props) => {
                     </div>
                     <div className={classes.input}>
                         <h2> Email</h2>
-                        <input placeholder="email@emailserver.com" name="email" ref={register({ required: true, pattern: /^\w+@[a-zA-Z_]+?\.[a-zA-Z]{2,3}$/i})}/>
+                        <input placeholder="email@emailserver.com" name="email" ref={register({ required: true, pattern:/^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,4}$/i})}/>
                         {errors.email && "Valid email required"}
                     </div>
                     <div className={classes.input}>
