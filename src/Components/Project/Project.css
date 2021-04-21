@@ -1,0 +1,15 @@
+.card {
+    border: 2px dashed red;
+    margin-left: 5rem;
+    margin-right: 5rem;
+    padding: 1rem;
+}
+h2 {
+    color: white;
+}
+a {
+    text-decoration: none;
+  }
+.fa-github {
+    color: white;
+}
