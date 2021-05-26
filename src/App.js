@@ -16,8 +16,8 @@ function App () {
     project_name: 'Crime Stats For Travelers',
     project_img: 'https://raw.githubusercontent.com/jengopockets/Portfolio/master/src/image/Crime.png',
     project_description:'Crime Stat for Travelers is a ReactJS web application created to visualize crime statistics in the US. We used Mapbox Gl to create the US map, and a custom filter to show crime rates in each state and used custom logic for state crime stat filters.',
-    git: 'https://github.com/Lambda-School-Labs/crime-statistics-for-travelers-fe',
-    site: 'https://crimestatsfortravelers.com/'
+    git: 'https://github.com/jengopockets/crime-statistics-for-travelers-fe',
+    site: 'https://60adcc2a327c654384098df0--stoic-borg-4eb015.netlify.app/'
     },
     {
     id: 2,
